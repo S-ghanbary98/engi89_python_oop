@@ -93,3 +93,40 @@ print(math.floor(num1)) # math.floor() rounds down
 ```
 print(random())
 ```
+
+
+## Other Packages
+```
+import os, datetime, sys
+
+work_dir = os.getcwd()  #returns current path
+print(work_dir)
+
+print(os.cpu_count())   # Returns number of cpu cores
+print(os.path)          # return current pasth
+
+print(datetime.datetime.today())    # Returns Current time
+print(sys.path)                     # Returns system Path
+```
+
+
+
+## API Interactions
+
+-pip is a package manager in python to intall packages that are not available.
+- To install the `requests package` the following must be typed in the terminal.
+
+`pip install requests`
+
+### First API Request: BBC News
+
+```
+import requests
+
+requests_api = requests.get("https://www.bbc.co.uk/")
+
+print(requests_api.status_code) # 200 for success - 404 and above
+print(requests_api.headers)
+print(type(requests_api.content))
+
+```
